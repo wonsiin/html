@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>cascading 구조 원리</title>
+    <!-- 위에서 아래로 진행되어 가장 마지막껏이 최종이 된다.-->
+    <style>
+        p {
+            color: red;
+        }
+        /* .을 적는건 클래스를 불러오기때문에 지정 후 언제든지 이용가능
+        같은 클래스명을 줄수있다.*/
+        p.item{
+            background-color: aquamarine;
+        }
+        /* #를 적은건 아이디를 불러오기 때문에 지정 후 언제든지 이용가능
+        아이디 값은 2개 줄수 없고 오로지 1개만 적용가능*/
+        #something{
+            font-size: 1.5em;
+        }
+        /* !important가 들어가면 1순위로 적용시킨다.
+        인라인 스타일 -> id스타일 -> 클래스 스타일 -> 태그 스타일 */
+    </style>
+</head>
+<body><!--클래스를 많이 늘려서 적용시켜줄수있다.-->
+    <p class="item first test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet quam voluptate provident ipsum non officiis, fugiat tenetur voluptatem eaque sequi quisquam? Molestias quo odit soluta nemo earum fuga et.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet quam voluptate provident ipsum non officiis, fugiat tenetur voluptatem eaque sequi quisquam? Molestias quo odit soluta nemo earum fuga et.</p>
+    <p class="item second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet quam voluptate provident ipsum non officiis, fugiat tenetur voluptatem eaque sequi quisquam? Molestias quo odit soluta nemo earum fuga et.</p>
+    <p id="something">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet quam voluptate provident ipsum non officiis, fugiat tenetur voluptatem eaque sequi quisquam? Molestias quo odit soluta nemo earum fuga et.</p>
+
+</body>
+</html>

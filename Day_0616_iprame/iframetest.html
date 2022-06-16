@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--/* a태그 밑줄 지우기 */
+        iframe{
+            width: 100%;
+            height: 550px;
+            padding: 10px;
+            border: 1px dashed lightgray;
+        }
+        a {
+            text-decoration: none;
+            color: darkred;
+        }
+        a:hover{
+            FONT-WEIGHT:bold;
+            color: azure;
+            background-color: blueviolet;
+        }-->
+    <meta charset="UTF-8">
+    <title>iframe 테스트</title>
+    <link rel="stylesheet" href="./style/frame.css"><!--외부 css 스타일 방법 (네크워크가 안좋으면 깨질수 있다.)-->
+</head>
+<body>
+    <div class="confent">
+        <ul>
+            <li><a href="../Day_0613_HTML/first.html" target="content" style="font-size: 1.5em;">첫번째 문서</a></li><!--안에 스타일을 넣어주면 유지보수가 힘들다.-->
+            <li><a href="../Day_0613_HTML/list.html" target="content">목록(카레만들기)</a></li><!--전체 선택자는 *로 하면된다.-->
+            <li><a href="../Day_0614Pyo/imagetest.html" target="content">이미지 연습</a></li>
+            <li><a href="../Day_0614Pyo/table.html" target="content">테이블 생성</a></li>
+            <li><a href="../Day_0615_form/formtest2.html" target="content">폼 데이터 만들기</a></li>
+        </ul>
+        <hr>
+        <iframe src="../Day_0613_HTML/first.html" name="content"></iframe>
+    </div>
+    
+</body>
+</html>

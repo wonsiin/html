@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>여러 종류의 폼 연습</title>
+    <!--  border: 1px solid red;
+            background-color: yellow; margin: 50px 20px 50px 20px; border: 1px solid red; -->
+    <style>
+        div.content {
+            width: 800px; /* block tag 위 오른쪽 아래 왼쪽 */
+            margin: 0 auto;
+            
+        }
+        div.content>h1{
+           /* 모든값을 센터로 맞추겟다는 뜻 */
+           text-align: center;
+           color: darkred;
+           background-color: black;
+           padding : 20px 0 20px 0;
+           margin-bottom: 0px;
+        }
+        table{
+            width: 800px;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+        th{ 
+            width: 200px;
+            padding-right: 0px;
+            /* padding : 10px 0 10px 0;*/
+        }
+        td{
+            width: 600px;
+            padding-left: 10px;
+        }
+        
+
+        /* [] 를 주면 타입을 넣기위해사용*/
+        input[type="text"],input[type="password"],input[type="email"] {
+            margin : 10px;
+            width :400px;
+            height: 20px;
+         }
+         textarea{
+            padding: 10px 10px 10px 10px;
+            width: 580px;
+            resize: none;
+         }
+        /* 제목 : 200px, 내용 : 600px, 좌측 안쪽여백 : 10px*/
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>다양한 폼태그</h1>
+        <form>
+            <table border="1">
+            <tr>
+                <th><label for="usrid">사용자 아이디</label></th>
+                <td><input id="usrid" type="text" name="usrid" placeholder="ID는 5~10자 사이로 입력" maxlength="10" minlength="5">
+                <input type="button" value="아이디 중복확인">
+            </tr>
+            <tr>
+                <th><label for="usrname">사용자 이름</label></th>
+                <td><input id="usrname" type="text" name="usrname" placeholder="이름을 1~10자 사이로 입력" maxlength="10" minlength="1"></td>
+
+            </tr>
+            <tr>
+                <th><label for="usrpwd">비밀 번호</label></th>
+                <td><input id="usrpwd" type="password" name="usrpwd" placeholder="비밀번호를 입력" maxlength="30" min="11"></td>
+            </tr>
+            <tr>
+                <th><label for="usremail">이메일</label></th>
+                <td><input id ="usremail" type="email" name="usremail" placeholder="이메일을 입력"></td>
+            </tr>
+            <tr>
+                <th><label for="usrradio">성별</label></th>
+                <td>
+                    <input id="usrradio" type="radio" name="usrradio" value="남" checked="checked">
+                    <label for ="usrradio">남</label>
+                    <input id="usrradio" type="radio" name="usrradio" value="여">
+                    <label for ="usrradio">여</label>
+                </td>
+            </tr>
+            <tr>
+                <!--checkbox String[] hobby = {"축구","야구"...} / String hobby ="축구,야구" -->
+                <th>취미</th>
+                <td>
+                    <input id="soccer" type="checkbox" name="hobby" value="축구" checked="checked">
+                    <label for="soccer">축구</label>
+                    <input id="baseball" type="checkbox" name="hobby" value="야구" checked="checked">
+                    <label for="baseball">야구</label>
+                    <input id="basketball" type="checkbox" name="hobby" value="농구">
+                    <label for="basketball">농구</label>
+                    <input id="volleyball" type="checkbox" name="hobby" value="배구">
+                    <label for="volleyball">배구</label>
+                </td>
+            </tr>
+            <tr>
+                <th>다양한 Input 방법</th>
+                <td>
+                    <input type="hidden" name="data" value="아무거나">
+
+                    <label for="upload">첨부파일 : </label>
+                    <input id="upload" type="file" name="upload"><!-- input file 은 method="POST" 이여야 한다.-->
+                    <br>
+                    <label for="color">색상 : </label>
+                    <input id="color" type="color" name="mycolor"> <!-- 값을 구하고 그 값을 보내고 싶으면 name을 설정해줘야한다.-->
+                    <br>
+                    <label for="today">날짜 : </label>
+                    <input id="today" type="date" name="today" min="2021-01-01" max="2023-12-31">
+                    <!-- min max값으로 날짜 설정에 제한을 줄수 있다.-->
+                    <br>
+                    <label for="num">숫자 : </label>
+                    <input id="num" type="number" name="num" min="-10" max="10" step="2">
+                    <br>
+                    <label for="range">범위 : </label>
+                    <input id="range" type="range" name="range" min="-10" max="10" step="2">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="location">지역</label></th>
+                <td>
+                    <select name="location" id="location">
+                        <optgroup label="서울지역">
+                            <option value="강남구">강남구</option>
+                            <option value="서대문구">서대문구</option>
+                            <option value="은평구" selected="selected">은평구</option>
+                            <option value="동작구">동작구</option>
+                            <option value="관악구">관악구</option>
+                        </optgroup>
+                        <optgroup label="기타지역">
+                            <option value="제주">제주</option>
+                            <option value="속초">속초</option>
+                            <option value="부산">부산</option>
+                            <option value="광주">광주</option>
+                            <option value="인천">인천</option>
+                        </optgroup>
+                    </select>
+                    <!--select 를 여러개 출력하고, 선택/  size =3 (목록 3개까지 보이게 가능) ,multiple : 여러개 선택가능-->
+                    <select name="location2" id="location2" size="3" multiple>
+                        <optgroup label="서울지역">
+                            <option value="강남구">강남구</option>
+                            <option value="서대문구">서대문구</option>
+                            <option value="은평구" selected="selected">은평구</option>
+                            <option value="동작구">동작구</option>
+                            <option value="관악구">관악구</option>
+                        </optgroup>
+                        <optgroup label="기타지역">
+                            <option value="제주">제주</option>
+                            <option value="속초">속초</option>
+                            <option value="부산">부산</option>
+                            <option value="광주">광주</option>
+                            <option value="인천">인천</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <!--여러줄 글상자-->
+                <th><label for="opinion">의견</label></th>
+                <td>
+                    <textarea id="opinion" name="opinion" rows="8" cols="80"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="전송">
+                    <input type="reset" value="취소">
+                    <input type="button" value="버튼1">
+                    <button type="button">버튼2</button>
+                    <input type="image" src="./images/button.png" height="35px"><!--height 설정 안해주면 기본값px-->
+                </th>
+            </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

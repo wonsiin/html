@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head> <!-- text-decoration: none 언더라인 사라짐-->
+    <meta charset="UTF-8">
+    <title>하이퍼링크를 통한 문서의 연결</title>
+    <style>
+        body{
+            font-size: 1.5em;
+        }
+       
+        a{
+            text-decoration: none; 
+            color : black
+
+        }
+                /* unvisited link */
+        a:link {
+            color: red;
+        }
+        
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+        
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+            font-weight: bold;
+        }
+        
+        /* selected link */
+        a:active {
+            color: blue;
+            background-color : yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="confent" id="top">
+        <ul>
+            <li><a href="https://www.naver.com" target="_self">네이버</a></li>
+            <li><a href="https://www.w3schools.com" target="left">w3schools</a></li>
+            <li><a href="./imagetest.html" target="left">이미지 연습</a></li>
+            <li><a href="./table.html">테이블 연습</a></li>
+            <li><a href="mailto:admin@example.com">관리자에게 메일보내기</a></li>
+            <li><a href="javascript:alert('이것은 경고야')">자바스크립트 경고</a></li>
+        </ul>
+    </div>
+    <div>
+        <p>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+            !!<br>
+        </p>
+        <div><a href="#top">위로 가기</a></div>
+    </div>
+</body>
+</html>
