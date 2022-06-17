@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        div.content {
+            color : orange;            /* 상속 o*/
+            font-size: 2em;               /* 상속 o*/
+            border : 1px solid blue;    /* 상속 x*/
+        }
+        body{
+            color: brown;
+            font-size: 3em;
+        }
+        span{
+            font-size: 1em;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>Lorem<span>ipsum</span> dolor sit
+            <span>ossimus</span> ossimus iusto.</p>
+    </div>
+    
+</body>
+</html>

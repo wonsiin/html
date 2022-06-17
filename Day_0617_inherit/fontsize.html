@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-size: 20px;} 
+        p.size40{font-size: 40px;  }
+        p.size2em{font-size: 2em;  }
+        p.size150p{font-size: 200%;  }
+
+        div.second > p {font-size: 2em;}    /*32px*/
+        div.second > p > span {font-size: 2em;} /*부모 폰트 사이즈의 2배 64px*/
+
+        div.third > p {font-size: 2rem;}            
+        /* rem : 조상(조상 : html) 폰트 사이즈의 2배 32px*/
+        div.third > p > span {font-size: 2rem;}     
+        /*rem : body 가 기준이라서 body기준으로 따라간다. 32px*/
+    </style>
+</head>
+<body>
+    <div class="first">
+        <p>
+            Lorem ipsum dolor sit amet consectetur acere?
+        </p>
+        <p class="size40">
+            Lorem ipsum dolor sit amet consectetur acere?
+        </p>
+        <p class="size2em">
+            Lorem ipsum dolor sit amet consectetur acere?
+        </p>
+        <p class="size150p">
+            Lorem ipsum dolor sit amet consectetur acere?
+        </p>
+    </div>
+    <hr>
+    <div class="second">
+        <p>
+            Lorem ipsum <span>dolor</span> sit amet consectetur acere?
+        </p>
+    </div>
+    <hr>
+    <div class="third">
+        <p class="size40">
+            Lorem ipsum dolor sit amet consectetur acere?
+        </p>
+    </div>
+        <p class="size2em">
+            Lorem ipsum dolor sit amet consectetur acere?
+        </p>
+        <p class="size150p">
+            Lorem ipsum dolor sit amet consectetur acere?
+        </p>
+    
+    
+</body>
+</html>
