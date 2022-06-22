@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let content = document.getElementById("content");
+            let btn = document.getElementById("btn");   //object
+            btn.onclick = function(){
+                alert("진짜 눌럿소!");
+                content.innerHTML = "동해물과 백두산이 마르고 닳도록";
+                //눌렀을때 안에 글을 바꾸는 방법 이 방법으로 인해 다양한 작업을 실행할수있음.
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>연습</h1>
+    <p id="content">Lorem, ipsum dolor sit amet mollitia distinctio officia, minus eum officiis repellendus consectetur nobis.</p>
+    <div><input id="btn" type="button" value="눌러봥"></div>
+</body>
+</html>

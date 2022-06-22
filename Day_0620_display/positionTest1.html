@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div.parent{
+            border : 1px solid #aaa;
+            padding: 10px;
+        }
+        div.parent{
+            border : 1px solid #aaa;
+            padding: 10px;
+            /* position: relative : 부모태그의 속성이 position:relative, absolute인
+            부모를 기준으로 이동*/
+            position: relative;
+        }
+        div.sibling{
+            background-color: skyblue;
+            padding: 5px;
+            text-align: center;
+        }
+        div.second{
+            position: static;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+        div.relative{
+            position: relative;
+            /*원래 자기를 기준으로 top, left 값만큼 이동*/
+            top: 20px;
+            left: 20px;
+        }
+        div.static{
+            position: static;
+            /*원래 자기를 기준으로 top, left 값만큼 이동*/
+            top: 20px;
+            left: 20px;
+        }
+        div.Absolute{
+            position: Absolute;
+            /*바닥에 있어야할 애가 바닥에 붙어버린다.*/
+            /*부모클래스에 자신이 지정되지 않으면 부모의 position을 찾아 끝까지 찾아올라가서
+            그 기준으로 잡아버린다.*/
+            top: 20px;
+            left: 20px;
+        }
+
+        div.fixed{
+            position: fixed;
+            /*모니터 상단 왼쪽 화면끝이 기준이 된다.*/
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Position 연습</h1>
+    <!--static, relative, absolute, fixed 라는 속성들이 있다.-->
+    <h2>Static (default)</h2>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second static">Static</div>
+        <div class="sibling">Third</div>
+    </div>
+
+    <h2>Relative</h2><!--상대적 느낌?-->
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second relative">Relative</div>
+        <div class="sibling">Third</div>
+    </div>
+
+    <h2>Absolute</h2>
+    <!--화면 왼쪽 위끝이 기준으로 적용된다.-->
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second Absolute">Absolute</div>
+        <div class="sibling">Third</div>
+    </div>
+
+    <h2>Fixed</h2>
+    <!--화면 왼쪽 위끝이 기준으로 적용된다.-->
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second fixed">Fixed</div>
+        <div class="sibling">Third</div>
+    </div>
+</body>
+</html>

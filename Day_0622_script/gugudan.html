@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //키보드로부터 데이터를 입력받는다. (prompt() ) -> num변수에 입력
+        //콘솔창에 num의 데이터 타입을 출력 (typeof)
+        //문자열이 포함되지 않을 경우 (isNaN(num))
+
+        let i = prompt();
+        if(i != 0){
+            let t = isNaN(i);
+            if(t == false){
+                for(let j = 1; j < 10; j++){
+                    document.write(`${i} x ${j} = ${i * j}<br>`);
+                }
+            }
+            if(t == true){
+                alert("숫자만 입력해 주세요");
+            }
+        }else if (i.length == 0){
+            alert("숫자를 입력해 주세요");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

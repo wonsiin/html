@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>display 속성을 사용</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        div.content{
+            width : 1000px;
+            height: 100vh; 
+            /* viewport height(vh) : 사용하는 장비의 100% 로 보여지게 한다는 뜻
+            vw : 비슷하게 보게하기위한 또 다른 방법*/
+            background-color: blueviolet;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0;
+            /* 폰트 사이즈가 있으면 여백이 생기고 0이면 붙는다.*/
+        }
+        a, a:link, a:visited{
+            background-color: yellowgreen;
+            display: inline-block;
+            /* display: inline-block 높이와 폭도 조절이 가능해진다.*/
+            /* display: block; 이건 디스플레이만*/
+            font-size: 1rem;
+            /* 1rem을 붙여서 적어줘야 글씨가 사라지지 않는다.*/
+            width: 200px;
+            height: 40px;
+            padding: 20px 0 0 0;
+        }
+        a:hover, a:active {
+            background-color: pink;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a href="#">이동하기-1</a>
+        <a href="#">이동하기-2</a>
+        <a href="#">이동하기-3</a>
+        <a href="#">이동하기-4</a>
+        <a href="#">이동하기-5</a>
+    </div>
+</body>
+</html>

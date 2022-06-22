@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //변수의 scope
+        let a = 10; //전역변수(global variable) , (static int a = 10; 전역변수)
+        {
+            let b = 20; //지역변수(local variable)
+            console.log(a);
+            console.log(b);
+        }
+        //console.log(a);
+        //console.log(b); //지역변수를 밖에서 보려고 하면 오류남 (java랑 같음)
+        for(let i=0; i<5; ++i){
+            console.log(i);
+        }
+        console.log(a);
+    </script>
+</head>
+<body>
+    <script>
+        console.log("body 안에서 출력 : " + a); //a가 전역변수에 설정되어있어서 사용이 가능하다
+    </script>
+</body>
+</html>

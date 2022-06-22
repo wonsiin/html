@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div.content1{
+            border: 1px dashed black;
+            padding: 50px;
+        }
+        /* visibility, z-index 자료 */
+        div.content1>.item{
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+            /* 테두리 지정 border */
+            background-color: cornflowerblue;
+        }
+        /*몇번째 요소에 적용할것인지 지정*/
+        div.content1>.item:nth-child(2){
+            visibility: hidden;
+            /*display: none 해당 부분을 안보이게 해준다. 히든은 그 부분만 비운다.*/
+
+        }
+
+        div.content1>.item:nth-child(1){
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 3;
+            /* z-index 는 맨 위로 올리고싶을때 사용 번호가 클수록 앞으로 나온다.*/
+            background-color: pink;
+        }
+        div.content1>.item:nth-child(3){
+            position: absolute;
+            top: 30px;
+            left: 100px;
+            z-index: 1;
+            background-color: darkcyan;
+        }
+        div.content1>.item:nth-child(4){
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            z-index: 2;
+            background-color: hotpink;
+        }
+
+        /* float 왼쪽 , 오른쪽 배치 */
+        /* 0.00011 -> 1.1 * 2의 몇승으로 바꿈 */
+        div.content2{
+            border: 1px dashed blue;
+            padding: 50px;
+            width: 1000px;
+            height: 400px;
+        }
+
+        div.content2>.item{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            background-color: grey;
+            color: antiquewhite;
+            float: left;
+        }
+        div.content2>.item:nth-child(3){
+           /* float: right; */
+            clear: left;
+            /* right , left, doth*/
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content1">
+        <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+    </div>
+
+    <div class="content2">
+        <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+    </div>
+</body>
+</html>

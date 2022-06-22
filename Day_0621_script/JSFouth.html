@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //let, var, const, nothing(x {변수를 선언하지않고 사용한다} (사용하면 안된다.))
+        
+        {
+            var a = 10;
+            console.log("a = " + a);
+        }
+        var a = 22; //var는 중복 변수로 사용할수있다. 협업하면 문제가 될수 있다.
+        console.log("a = " + a);
+        var a = "아아";
+        console.log("a = " + a);
+        //이게 nothing 사용법 이지만 사용하지 말것.
+
+        //TypeScript
+        let b = 22;
+        console.log("b = " + b);
+        console.log(typeof b);
+        //전역 내에서 같은 변수명을 중복적용할수 없다.
+        b = '스물둘';
+        //타입이 바뀔수 있다. 넣는 값에 의하여
+        console.log("b = " + b);
+        console.log(typeof b);
+        //`` , const 변수 선언방법 ==> 내일
+        const name = "홍길동";
+        let age = 25;
+        //name="손오공";
+        //const 한번 값을 지정해주면 변동 x constant 변수는 값을 초기화하고 난 후 수정 불가
+        age = 27;  
+        console.log(name + "님, 당신의 나이는 " + age + "살 입니다.");
+        let tmp = `${name}님, 당신의 나이는 ${age+3}살 입니다.`;
+        console.log(tmp);
+        //console.log(`${name}님, 당신의 나이는 ${age}살 입니다.`);
+        //백픽 문자열 `` 사용 후 사용  이 좋아진다. ${}안에서 간단한 연산은 가능하다.
+        //alert(""); //확인버튼
+        //confirm(" ");//문자열 내용을 화면에 보여줌
+        //prompt(" "); 입력을 받을 수 있도록 한줄 글 상자를 함께, 확인함
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="title">Hello, world</h1>
+
+    <script>
+        //한줄 주석
+        /*
+        여러줄 주석
+
+        v8 엔진을 만나서 멈추게된다 그리고 해석이됨
+        */
+        let age = 22;
+        let name = '홍길동';
+        let bool = 10 < 20;
+        let func = new Function("5+2");
+        let today = new Date();
+        let dontexist;
+        let nullObj = null;
+        let ary = [];
+        let obj = {};
+        let tag = document.getElementById("title");
+        // 바디랑 연결 해주는 명령어
+        //alert()
+        //window.alert('age의 타입' + typeof age);
+        console.log('age의 타입' + typeof age);
+        console.log('name의 타입' + typeof name);
+        console.log('bool의 타입' + typeof bool);
+        console.log('func의 타입 ' + typeof func);
+        console.log('today의 타입 ' + typeof today);
+        console.log('dontexist의 타입 ' + typeof dontexist);
+        console.log('nullObj의 타입 ' + typeof nullObj);
+        console.log('ary의 타입 ' + typeof ary);
+        console.log('obj의 타입 ' + typeof obj);
+        console.log('tag의 타입 ' + tag);
+        //아래쪽에 있는건 데이터를 가져올수 없다.
+
+    </script>
+</body>
+</html>

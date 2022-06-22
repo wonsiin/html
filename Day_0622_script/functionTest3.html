@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //body 작업이 다 끝나고 진행시키기 위한 함수
+        window.onload = function(){
+            let tag = document.getElementById("title").innerHTML; //element 요소 전체 (tag)를 읽어온것이다.
+                                                                //.innerHTML 사이의 글자만 읽는다.
+            console.log(tag);
+            document.getElementById("title").innerHTML = "바뀝니다."; //h1 태그의내용을 바꿀수 있다.
+        }
+        
+    </script>
+</head>
+<body>
+    <h1 id="title">연습</h1>
+    Lorem, ipsum dolor sit amet consectetur adipisicing consequatur fugit, fugiat ratione excepturi est dicta unde cum! Officiis?
+</body>
+</html>

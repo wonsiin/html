@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let a = 12.5;
+        let b = 3;
+        console.log('a + b =' + (a + b));
+        console.log('a - b =' + (a - b));
+        console.log('a * b =' + (a * b));
+        console.log('a / b =' + (a / b));
+        console.log('a % b =' + (a % b));
+        console.log('a ** b =' + (a ** b));
+
+        //비교연산자( == : 동등) 이라고 판단함 > < >= <= == ===(일치)
+        let c = 10;
+        let d = 22;
+        let e = '10';
+        console.log('c > d =' + (c > d));
+        console.log('c < d =' + (c < d));
+        console.log('c >= d =' + (c >= d));
+        console.log('c <= d =' + (c <= d));
+        console.log('10 == "10" ==> ' + (c == e));
+        console.log('10 === "10" ==> ' + (c === e));
+        console.log('10 != "10" ==> ' + (c != e));
+        console.log('10 !== "10" ==> ' + (c !== e));
+        //일치 하냐고 물어보는게 ===다(값과 타입이 같아야 참이라고 나온다.)
+
+        //숫자와 문자의 연산 + (문자열 결합연산자)
+        let f = 10;
+        let g = '5';
+        let h = '5a';
+        console.log("10 + '5' = " + (f + g));
+        //문자열 합하기가 된다.
+        console.log("10 / '5' = " + (f / g));
+        //문자열인데 나눠진다.
+        console.log("10 * '5' = " + (f * g));
+        //문자열인데 곱해진다.
+        console.log("10 * '5a' = " + (f * h));
+        //NaN 나온다. (Not a Number)
+        console.log(isNaN(h));
+        //h안에 숫자가 아닌것이 포함되어 있는가?
+
+        //연산
+        let i = 6;
+        let j = 7;
+        console.log(' 6 / 7 = ' + ( i / j));
+        //java 는 0이지만 script는 실수형 연산을 한다.
+        console.log(' 6 / 7 = ' + ( i / 0));
+        console.log(' 6 / 7 = ' + ( i / -0));
+        //Infinity(무한대)출력됨 (0이 단순한 0이 아니라 0과 근접한 값이라고 한다.)
+
+        //논리연산자 ( ! && || )
+        let k = true;
+        let l = false;
+        console.log('!k ' + (! k)); // t
+        console.log('k && l ' + (k && l)); //f
+        console.log('k || l ' + (k || l)); //t
+
+        //삼항연산자 ? : 값
+        let m = 20;
+        (m >= 20) ? alert("m은 20보다 크거나 같다."):alert("m은 20보다 크거나 작다.");
+        //(m >= 20) ? sysout("m은 20이상."): sysout("m은 20미만.");
+        //String msg (m>=20) ? "m은 20이상.": "m은 20미만.";
+        //값만 들어가 있어야한다. 근데 안된다.
+        //10 + 20; (식)
+        //let temp = 10 + 20; (문장)
+        //&& and  || or 의 "short circuit"
+        let n = 10;
+        (n > 10) && alert("출력될까요-1?"); // f && ?? == f     앞 거짓 && 이면 뒤 x (뒷 값을 몰라도 찾을수 있는 방법)
+        (n >= 10) && alert("출력될까요-2?"); //t && t == t      앞 참 && 이면 뒤 o
+
+        (n > 10) || alert("출력될까요-3?"); //f || t == t       앞 거짓 || 이면 뒤 o
+        (n >= 10) || alert("출력될까요-4?");    //t || t == f   앞 참 || 이면 뒤 x
+
+        // ++ -- (증감 연산자)
+
+        //대입연산자 = += -= *= /=...
+
+        //2진수 관련 연산자 ~(0,1연산자) >> >>> << (쉬프트 연산자)
+
+        //typeof [] {} . 기타 연산자들
+        let today = new Date();
+        console.log("현재 연도는 ? " + today.getFullYear());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

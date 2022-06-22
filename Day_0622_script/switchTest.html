@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let site = prompt("네이버, 다음, 네이트, 구글 중 선택");
+        let url;
+
+        switch(site){
+            case "네이버" : url = "www.naver.com"; break;
+            case "다음" : url = "www.daum.net"; break;
+            case "네이트" : url = "www.nate.com"; break;
+            case "구글" : url = "www.google.com"; break;
+            default : alert("없는 사이트를 선택 했습니다.");
+        }
+        if(url){
+            let = protocol = "http://";
+            url = protocol + url;
+            location.href = url;
+            //가로 없이 쓰는것을 속성 이라고 한다. Write 등  WR가능. 브라우저의 주소표시줄에 URL을 기록해서 이동하는 역활을함(GET방식)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

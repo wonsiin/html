@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        div:nth-child(1){
+            margin: 40px 0;
+            background-color: chocolate;
+
+        }
+        div:nth-child(2){
+            margin: 50px 0; /*위 아래 마진이 겹칠 경우 상쇄됨*/
+            background-color: blueviolet;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        one
+    </div>
+    <div>
+        two
+    </div>
+</body>
+</html>

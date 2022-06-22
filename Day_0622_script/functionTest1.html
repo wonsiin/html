@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //선언적 함수의 정의 ==> 내부적으로 function이 먼저 실행된다. 함수 호이스팅
+        function add(a,b){
+            let c=a+b;
+            return c;
+        }
+        //함수의 호출이 먼저 진행되어도 값이 출력된다.
+
+        //함수의 호출
+        let result = add(10,5);
+        console.log(result);
+
+        let tem = add; //함수 전체를 담을수도 있다. 결과값을 받지 않으려면 ()를 넣어선 안된다.
+        console.log(tem(44,55));//출력칸에서 마치 메소드처럼 작동한다.
+    </script>
+</head>
+<body>
+
+</body>
+</html>

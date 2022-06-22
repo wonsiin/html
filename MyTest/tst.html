@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        iframe.ifr{
+            position: relative;
+            width:50%;
+            padding-bottom: 65%;
+            height: 700px;
+            border: 1px dashed lightblue;
+        }
+
+        iframe.ift{
+            position: absolute;
+            width:50%;
+            height: 100%;
+            height: 700px;
+            border: 1px dashed lightblue;
+        }
+        .form{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <del id="top">
+        <form class="form">
+            <textarea id="te"></textarea>
+        </form>
+    </del>
+    <del class="tata">
+        <table>
+            <iframe class="ifr" src="https://ja.dict.naver.com/#/main">일본어 사전</iframe>
+            <iframe class="ifr ift" src="https://hanja.dict.naver.com/#/main">한자 사전</iframe>
+        </table>
+    </del>
+</body>
+</html>

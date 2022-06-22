@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+       window.onload = function(){
+        let usrname = document.getElementById("usrname");
+        let age = document.getElementById("age");
+        let btn = document.getElementById("btn");
+
+        btn.onclick = function(){
+            //이름은 반드시 입력받는다.
+            //나이는 반드시 숫자로 입력받는다.
+            if(usrname.value.length==0) {
+                alert("이름을 입력하세요.")
+                usrname.focus();
+                return;
+            }
+            if(isNaN(age.value)|| age.value.length == 0){
+                alert("나이를 숫자로 입력하세요");
+                age.select();
+                return;
+            }
+
+            let tmp = `안녕하세요? ${usrname.value}씨, 나이가 ${age.value}살 이시군요.`;
+            alert(tmp);
+        };
+       };
+    </script>
+</head>
+<body>
+    <form>
+        <TABLE border="1">
+            <tr>
+                <th><label for="usrname">이름</label></th>
+                <td><input id="usrname" type = "text" placeholder="이름 입력"></td>
+            </tr>
+            <tr>
+                <th><label for="usrage">나이</label></th>
+                <td><input id="age" type = "text" placeholder="나이 입력"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input id="btn" type="button" value="확인">
+                    <input type="reset" value="지우기">
+                </th>
+            </tr>
+        </TABLE>
+    </form>
+</body>
+</html>
