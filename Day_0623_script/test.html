@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        let x = "11"
+        let y = "1.2-3"
+        console.log(x+y)
+        console.log(parseInt(x)+ parseInt(y))
+        //parseInt 는 소수점이하의 자리를 버린다. 정수로 변환가능한 부분까지만 변환
+        //입력에 문자열이 있으면 변환 가능한 부분까지 변환해서 계산하기때문에 계산이 된다.
+        //a11a 일 경우 앞에서부터 변환을 못하면 거기서 끝난다.
+        //console.log(parseFloat(x)+ parseFloat(y))
+        //parseFloat 는 소수점이하도 출력한다.
+        //parseInt 랑 비슷하게작용을 한다.
+        //입력에 문자열이 있으면 변환 가능한 부분까지 변환해서 계산하기때문에 계산이 된다.
+        console.log(Number(x)+ Number(y))
+        //parseFloat , parseInt 랑 비슷하다.
+        //Number : 문자열안에 숫자가 아닌 데이터가 포함되어 있으면 NaN 처리
+        //1.2e3:  1.2 * 10의3승(1000) 해주는거랑 똑같은 처리가 된다.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

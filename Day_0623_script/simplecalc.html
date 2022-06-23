@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        label, span.title{
+            display: inline-block;
+            width: 60px;
+        }
+        div.all {
+            font-weight: bold;
+            width: 150px;
+            height: 200px;
+            border: 5px;
+        }
+        button {
+            width: 50%;
+            height: 40px;
+            float: left;
+        }
+    </style>
+    <script src="./script/calc.js"></script>
+    <!-- js코드를 가져오는 방법 -->
+</head>
+<body>
+    <div class="content">
+        <h2>[ 계산기 ]</h2>
+        <label for="x">X = </label> 
+        <input id="x" type="text"><br>
+
+        <label for="y">Y = </label> 
+        <input id="y" type="text"><br>
+
+        <div>
+            <span class="title">정답 : </span>
+            <span id="result"></span>
+        </div><br>
+        <div class="all">
+            <div>
+                <button type="button" class="operator" id="pl">+</button>
+                <button type="button" class="operator" id="ma">-</button>
+                <button type="button" class="operator" id="nanu">/</button>
+                <button type="button" class="operator" id="multiply">*</button>
+                <button type="button" class="operator" id="multiply2">**</button>
+                <button type="button" id="clean">지우기</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
