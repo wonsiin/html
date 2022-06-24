@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+div.wrapper {
+    width: 800px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid gray;
+    
+}
+input.subjectScore{
+    width: 80px;
+    text-align: right;
+}
+
+h1 {
+    text-align : center;
+    background-color: darkslateblue;
+    color : white;
+}
+p.msg {
+    color : blue;
+    font-weight: bold;
+}
+li {
+    line-height: 1.7em;
+}
+span.subject {
+    display : inline-block;
+    text-align: left;
+    width : 190px;
+}
+input[type="text"] {
+   /* Code Here */
+}
+input[type="button"] {
+    display : block;
+    font-size : 1.2em;
+    font-weight: bolder;
+    margin : 0 auto;
+    background-color: aqua;
+    
+}
+span.subjectResult {
+    color :blue;
+}
+p#finalResult {
+    margin : 0 auto;
+    width : 150px;
+    height : 2em;
+    padding-top: 5px;
+    text-align: center;
+    color : red;
+    background-color: lightgrey;
+    font-weight : bold;
+    font-size :1.2em;
+}
