@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let hello = "hello, world!";
+            let tag = document.getElementById("result");
+            setInterval(temp, 1000);
+            //console 에 hello를 0.5초마다 불러오겟다는 의미
+            //첫번째 함수를 적는게 규칙이다.
+        }
+        function temp(){
+            console.log(hello);
+            tag.innerHTML = tag.innerHTML + hello + "<br>";
+        }
+    </script>
+</head>
+<body>
+    <h2 id="result"></h2>
+    <div>
+
+    </div>
+</body>
+</html>

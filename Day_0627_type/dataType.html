@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function plus(a,b){
+            return a + b;
+        }
+        function minus(a,b){
+            return a - b;
+        }
+        function calc(func, a, b){//func 위치에 함수를 받을수 있다.
+           let result = func(a,b);
+           return result;
+        }
+        console.log(calc(plus, 10, 20))
+        console.log(calc(minus, 10, 20))
+        //같은 위치에 받을수있는 function들을 입력하면 그 해당 function들을 가져오게된다.
+        //puls = func , 10 = a , 20 = b
+
+        //function temp(function(){}); 이렇게 만들수 있다.
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

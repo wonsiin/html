@@ -5,7 +5,7 @@ window.onload = function() {
     
 
     for(let i = 0; i<score.length; ++i) {
-        score[i].onchange = scoreInput;
+        score[i].addEventListener("keyup",scoreInput);
         //onchange 값바뀌면 바로 적용
     }
     confirm = document.getElementById("confirm");

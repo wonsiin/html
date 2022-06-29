@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let start = document.getElementById("start");
+            let stop = document.getElementById("stop");
+            let tag = document.getElementById("result");
+            let tag1 = document.getElementById("result1");
+
+            let timer;
+
+            start.onclick = function(){
+               timer = setInterval(function (){
+                let today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                let now = `${h} : ${m} : ${s}`;
+                tag.innerHTML = now;
+                tag1.innerHTML = tag1.innerHTML + "혼토";
+                }, 500);
+            }
+            stop.onclick = function(){
+                clearInterval(timer);
+            }
+            //이런식으로 선언한다.
+            //timer = setInterval(temp, 1000);
+            //console 에 hello를 0.5초마다 불러오겟다는 의미
+            //첫번째 함수를 적는게 규칙이다.
+        }
+        
+    </script>
+</head>
+<body>
+    <div>
+        <button type="button" id="start">시작</button>
+        <button type="button" id="stop">멈춤</button>
+    </div>
+    <h2 id="result"></h2>
+    <h2 id="result1"></h2>
+</body>
+</html>

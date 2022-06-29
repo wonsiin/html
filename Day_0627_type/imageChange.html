@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img#myImg{
+            width: 600px;
+            height: 420px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            //let temp = [3,4,5,"tt",[4.5,7.7]];
+            //console.log(temp[4][0]);
+            //이렇게 쓰는것도 가능하다.
+            //배열 안에 배열의순번을 적으면 해당값만 불러올수 있다. 파이썬도 가능하다.
+            let imgary = ['dog5.jpg','dog1.jpg','dog2.jpg','dog3.jpg','dog4.jpg'];
+            let path = './images/';
+            let i = 0;
+            //src의 주소값을 변경해주기위한 코드
+            setInterval(function(){
+                    document.getElementById("myImg").setAttribute("src", path+imgary[i]);
+                    i++;
+                    if(i >= imgary.length)  i = 0;
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <img id="myImg" src="./images/dog5.jpg">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+table.tab{
+    width: 500px;
+    height: 400px;
+    margin:0 auto;
+    background-color: aqua;
+
+}
+label {
+    width: 800px;
+    border-collapse: collapse;
+}
+
+th,td {
+    width: 200px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+th {
+    margin : 0px;
+    width: 200px;
+}
+td{
+    width: 200px;
+    height: 50px;
+    padding-left: 10px;
+}
+input[type="text"],input[type="password"],input[type="email"]{
+    margin : 10px;
+    width :400px;
+    height: 20px;
+}
+
+select {width: 100px; height: 26px;}
+
+textarea{
+    padding: 10px 10px 10px 10px;
+    width: 380px;
+    resize: none;
+}
+div.conten {
+    width: 800px;
+    margin: 0 auto;
+}
+div.conten>h1{
+    text-align: center;
+    color: white;
+    background-color: rgb(red, green, blue);
+    padding : 20px 0 20px 0;
+    margin-bottom: 0px;
+ }
+ /* <style>
+        div.content {
+            width: 800px; /* block tag 위 오른쪽 아래 왼쪽
+            margin: 0 auto;
+            
+        }
+        div.content>h1{
+           /* 모든값을 센터로 맞추겟다는 뜻
+           text-align: center;
+           color: darkred;
+           background-color: black;
+           padding : 20px 0 20px 0;
+           margin-bottom: 0px;
+        }
+        table{
+            width: 800px;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+        th{ 
+            width: 200px;
+            padding-right: 0px;
+            /* padding : 10px 0 10px 0;
+        }
+        td{
+            width: 600px;
+            padding-left: 10px;
+        }
+        
+
+        /* [] 를 주면 타입을 넣기위해사용
+        input[type="text"],input[type="password"],input[type="email"] {
+            margin : 10px;
+            width :400px;
+            height: 20px;
+         }
+         textarea{
+            padding: 10px 10px 10px 10px;
+            width: 580px;
+            resize: none;
+         
+        /* 제목 : 200px, 내용 : 600px, 좌측 안쪽여백 : 10px
+
+    </style> */

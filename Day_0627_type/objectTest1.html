@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let obj = [{name:"홍길순",age:23},{name:"손오공",age:25},{name:"저팔계",age:27}];
+
+            let table = '<table border="1">';
+                table += '  <tr>';
+                table += '      <th>이름</th>';
+                table += '      <th>나이</th>';
+                table += '  </tr>';
+                for(let i=0; i<obj.length;++i){
+                    table += '  <tr>';
+                    table += '      <th>'+ obj[i]['name'] +'</th>';
+                    table += '      <th>'+ obj[i]['age'] + '</th>';
+                    table += '  </tr>';
+                }
+
+
+                table += '</table>';
+            document.getElementById("target").innerHTML = table;
+        }
+        //object 는 {}로 한다.
+        //for(let i=0; i<obj.length; i++){
+        //    console.log(obj[i]['name'] + " " + obj[i]['age']);
+        //}
+        //console.log(obj['age']);
+    </script>
+</head>
+<body>
+    <div id="target"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* Code Here */
+#container{
+    width: 850px;
+    height: 0px auto;
+    margin: 0 auto;
+}
+
+h2.title{
+    text-align: center;
+}
+
+textarea{
+    width: 770px;
+    height: 100px;
+    resize: none;
+}
+
+input[name="youname"],input[name="num2"],input[name="email"]{
+    width :300px;
+}
+td.btn{
+    text-align: center;
+}
+th{
+    font-weight: bold;
+    
+    text-align: left;
+}
+span{
+    color: red;
+}
+
+table {
+    width: 800px;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}

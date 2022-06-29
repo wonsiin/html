@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./script/joinUs.js"></script>
+</head>
+<body>
+    <div class="conten">
+        <h1>회원 가입</h1>
+        <form>
+        <table class="tab" border="1" >
+            <tr>
+                <th>
+                    사용자 아이디
+                </th>
+                <td>
+                    <input type="text" id="usrid" name="usrid">
+                    <button type="button">아이디 중복확인</button>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    사용자 이름
+                </th>
+                <td>
+                    <input type="text" id="usrname" name="usrname">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    비번
+                </th>
+                <td>
+                    <input type="password" id="usrpwd" name="usrpwd">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    이메일
+                </th>
+                <td>
+                    <input type="text" id="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    성별
+                </th>
+                <td>
+                    <input id="gender" type="radio" name="gender" value="남" checked="checked">
+                    <label for="gender">남자</label>
+                    <input id ="gender" type="radio" name="gender" value="여">
+                    <label for="gender">여자</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    취미
+                </th>
+                <td>
+                    <input id="soccer" type="checkbox" name="hobby" value="축구" checked="checked">
+                    <label for="soccer">축구</label>
+                    <input id="baseball" type="checkbox" name="hobby" value="야구">
+                    <label for="baseball">야구</label>
+                    <input id="basketball" type="checkbox" name="hobby" value="농구">
+                    <label for="basketball">농구</label>
+                    <input id="volleyball" type="checkbox" name="hobby" value="배구">
+                    <label for="volleyball">배구</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    주소
+                </th>
+                <td>
+                    <select name="addr1" id="addr1">
+                            <optgroup label="서울지역">
+                            <option value="강남구">강남구</option>
+                            <option value="서대문구">서대문구</option>
+                            <option value="은평구" selected="selected">은평구</option>
+                            <option value="동작구">동작구</option>
+                            <option value="관악구">관악구</option>
+                         </optgroup>
+                         <optgroup label="기타지역">
+                            <option value="제주">제주</option>
+                            <option value="속초">속초</option>
+                            <option value="부산">부산</option>
+                            <option value="광주">광주</option>
+                            <option value="인천">인천</option>
+                        </optgroup>
+                    </select>
+                    <input type="text" id="addr2" placeholder="상세주소">
+                 </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="comment">남길말씀</label>
+                </th>
+                <td>
+                    <textarea id="comment" name="comment" rows="5" cols="50"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" id ="btn" value="전송">
+                    <input type="submit" id ="btn" value="확인">
+                    <input type="reset" value="취소">
+                </th>
+            </tr>
+        </table>
+        </form>
+        <div id="target"></div>
+    </div>
+</body>
+</html>
